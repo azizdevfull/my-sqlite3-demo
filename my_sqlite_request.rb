@@ -1,16 +1,6 @@
 require 'csv'
 require 'json'
-=begin
-Part 1 Describing scope of project
 
-# SELECT QUERY
-# INSERT QUERY
-# UPDATE
-# DELETE
-
-# 1.Type of request
-# 2. Set settings
-# 3. Run
 
 
 =end
@@ -48,13 +38,7 @@ class MySqliteRequest
         self
     end
 
-    #def join(column_on_db_a, filename_db_b, column_on_db_b)
-    #   self
-    #end
-
-    #def order(order, column_name)
-    #   self
-    #end
+   
 
     def insert(table_name)
         self._SetTypeOfRequest(:insert)
@@ -77,9 +61,7 @@ class MySqliteRequest
         self
     end
 
-    #def set(data)
-    #    self
-    #end
+   
 
     def delete
         self._SetTypeOfRequest(:delete)
@@ -213,63 +195,7 @@ class MySqliteRequest
 end
 
  def _main()
-=begin
-Questiom 0 of 10
 
-request = MySqliteRequest.new
-request = request.from('nba_player_data.csv')
-request = request.select('name')
-request.run
-
-Questions 1 of 10
-
-request = MySqliteRequest.new
-request = request.from('nba_player_data.csv')
-request = request.select('name')
-request = request.where('college', 'University of California')
-request.run
-
-
-Question 2 of 10
-
-request = MySqliteRequest.new
-request = request.from('nba_player_data.csv')
-request = request.select('name')
-request = request.where('college', 'University of California')
-request = request.where('year_start', '1997')
-request.run
-
-Question 3 of 10
-
-    request = MySqliteRequest.new
-    request = request.insert('nba_player_data_light.csv')
-    request = request.values({"name"=>"Don Adams","year_start"=>"1971","year_end"=>"1977",
-    "position"=>"F","height"=>"6-6","weight"=>"210","birth_date"=>"November 27, 1947",
-    "college"=>"Northwestern University"})
-    request.run
-
-Question 4 of 10
-
-request = MySqliteRequest.new
-request = request.insert('nba_player_data.csv')
-request = request.values('name' => 'Alaa Renamed')
-request = request.where('name', 'Alaa Abdenlaby')
-request.run
-
-Question 5 of 10
-
-request = MySqliteRequest.new
-request = request.delete()
-request = request.from('nba_player_data_light.csv')
-request = request.where('name', 'Don Adams')
-request.run
-
-=end    
-
-
-    
- end
- _main
 
 
  
