@@ -1,9 +1,6 @@
 require 'csv'
 require 'json'
 
-
-
-=end
 class MySqliteRequest
 
     def initialize
@@ -13,7 +10,6 @@ class MySqliteRequest
         @insert_attributes = {}
         @update_attributes = {}
         @table_name      = nil
-        #@order           = :asc
 
     end
 
@@ -38,8 +34,6 @@ class MySqliteRequest
         self
     end
 
-   
-
     def insert(table_name)
         self._SetTypeOfRequest(:insert)
         @table_name = table_name
@@ -50,7 +44,7 @@ class MySqliteRequest
         if (@type_of_request == :insert)
             @insert_attributes = data
         else
-            raise "Wrong type of request to call values ()"
+            raise "Wrong type of request"
         end
         self
     end
@@ -61,7 +55,9 @@ class MySqliteRequest
         self
     end
 
-   
+    #def set(data)
+    #    self
+    #end
 
     def delete
         self._SetTypeOfRequest(:delete)
@@ -196,6 +192,9 @@ end
 
  def _main()
 
+    
+ end
+ _main
 
 
  

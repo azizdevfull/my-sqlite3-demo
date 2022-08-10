@@ -3,7 +3,7 @@ require "csv"
 require_relative "./my_sqlite_request.rb"
 
 
-class MySqliteQueryCli
+class MySqliteCli
     
 
     def my_parser(str)
@@ -136,5 +136,5 @@ class MySqliteQueryCli
     end
 end
 
-msqcli = MySqliteQueryCli.new
+msqcli = MySqliteCli.new
 msqcli.run!
