@@ -14,7 +14,7 @@ cd my-sqlite3-demo
 # How to use
 
 ```
-ruby ruby my_sqlite_cli.rb
+ruby my_sqlite_cli.rb
 ```
 
 # See all players
